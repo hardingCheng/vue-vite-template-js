@@ -12,7 +12,8 @@
     "format": "prettier --write src/",
     "lint:style": "stylelint '**/*.{css,scss,vue}' --fix",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git-cz"
   },
   "dependencies": {
     "pinia": "^2.2.4",
@@ -29,6 +30,8 @@
     "@vitest/eslint-plugin": "1.1.7",
     "@vue/eslint-config-prettier": "^10.0.0",
     "@vue/test-utils": "^2.4.6",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.10.1",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -74,5 +77,10 @@
     "*.md": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
